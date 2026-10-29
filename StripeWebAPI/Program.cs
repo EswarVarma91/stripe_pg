@@ -1,8 +1,14 @@
+using StripeWebAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+// Subscription state lives in a local JSON file. Swap in a SQL-backed ISubscriptionStore here when a table exists.
+builder.Services.AddSingleton<ISubscriptionStore>(new JsonSubscriptionStore(
+    Path.Combine(builder.Environment.ContentRootPath, "data", "subscriptions.json")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

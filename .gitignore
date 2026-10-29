@@ -19,3 +19,6 @@ Thumbs.db
 
 # Local-only credentials extracted from source (never commit)
 LOCAL_STRIPE_KEYS.txt
+
+# Subscription store written by StripeWebAPI at runtime
+StripeWebAPI/data/
