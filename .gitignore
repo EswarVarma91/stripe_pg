@@ -1,0 +1,21 @@
+## Visual Studio / build output
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## NuGet packages (restored from each packages.config)
+packages/
+
+## Tooling / OS
+.freebuff/
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Local-only credentials extracted from source (never commit)
+LOCAL_STRIPE_KEYS.txt
