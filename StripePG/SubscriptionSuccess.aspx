@@ -12,7 +12,7 @@
         p { color: #333; }
         a { color: #6772E5; text-decoration: none; }
         a:hover { text-decoration: underline; }
-    </style>>
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -20,6 +20,8 @@
             <h1>Subscription Successful!</h1>
             <p>Thank you for subscribing. Your account has been activated.</p>
             <p>You can now go to your <a href="Default.aspx">Dashboard</a>.</p>
+            <asp:Literal ID="litPlan" runat="server"></asp:Literal>
+            <asp:Literal ID="litRenewal" runat="server"></asp:Literal>
             <asp:Literal ID="litSessionId" runat="server"></asp:Literal>
         </div>
     </form>
